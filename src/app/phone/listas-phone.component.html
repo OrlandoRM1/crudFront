@@ -1,0 +1,22 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Numero</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let phone of Phone">
+      <td>{{phone.nombre}}</td>
+      <td>{{phone.numero}}€</td>
+      <td><button class="btn btn-outline-warning" routerLink="/editar/{{phone.id}}"><i class="far fa-edit"></i> Editar</button></td>
+      <td><button class="btn btn-outline-danger" (click)="borrar(phone.id!)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+
+
+
+    </tr>
+  </tbody>
+</table>
+<td><button class="btn btn-outline-primary" routerLink="/nuevo"><i class="fas fa-plus-circle"></i> Agregar</button></td>
